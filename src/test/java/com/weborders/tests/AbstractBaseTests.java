@@ -15,9 +15,11 @@ import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 
 
-public abstract class AbstractBaseTest {
+abstract class AbstractBaseTest {
 
     protected WebDriver driver;
+    // if we have static it running multiple classes with same test
+    // also with static --> it resolve some issue nulpointerexception --> couple test in the xml runner
     protected static ExtentReports extentReports;
     protected static ExtentHtmlReporter extentHtmlReporter;
     protected static ExtentTest extentTest;
